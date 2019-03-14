@@ -33,5 +33,4 @@ proguard/
 
 #Gradle
 .gradle
-gradle
 build
