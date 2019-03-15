@@ -7,28 +7,14 @@ buildscript {
 
     dependencies {
         classpath 'com.android.tools.build:gradle:3.3.2'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
     }
 }
 
-apply plugin: 'com.android.library'
-
-android {
-
-    compileSdkVersion 26
-    buildToolsVersion "28.0.3"
-
-    defaultConfig {
-        minSdkVersion 8
-        targetSdkVersion 26
-    }
-
-    sourceSets {
-        main {
-            manifest.srcFile 'AndroidManifest.xml'
-            java.srcDirs = ['src']
-            resources.srcDirs = ['src']
-            renderscript.srcDirs = ['src']
-            res.srcDirs = ['res']
-        }
-    }
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+	}
 }
